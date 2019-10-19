@@ -4,10 +4,33 @@
   <title>What The Fork?</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href="css/ratchet.css" rel="stylesheet" >
+  <link href="./style.css" rel="stylesheet" >
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
-    <h1>What are you eating?</h1>
+    <h1>What The Fork?</h1>
+
+    <div id="predictions">
+      <div class="food-photo">
+        <img alt="pic" class="pic" src="placeholder.jpg" />
+      </div>
+    </div>
+
+    <form action="#">
+      <input type="file" id="filename" placeholder="Filename" size="100"/>
+      <button>What's on my fork?</button>
+    </form>
+
+    <div id="predictions">
+      <div class="nutrition">
+        <div id="concepts">
+          <h3>Your Food :</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <script src="js/ratchet.min.js"></script>
   </div>
 </body>
