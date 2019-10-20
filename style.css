@@ -1,8 +1,12 @@
+html { overflow-y: scroll; }
+
+body { position: absolute; }
+
 .wrapper {
     background-color: #f9dfe0;
     color: #3d8b7d;
     min-height: 100vh;
-    padding: 2em;
+    padding: 1.5em;
     text-align: center;
 }
 
@@ -13,10 +17,23 @@ h1 {
 }
 
 img {
-    height: 14em;
+    height: 30em;
+}
+
+.loading {
+    height: 10em;
 }
 
 form {
     padding: 1.5em 0;
     padding-left: 2.5em;
+    display: block;
+}
+
+.food-photo {
+    height: 16em;
+    width: 100vw;
+    background-image: url(./placeholder.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
