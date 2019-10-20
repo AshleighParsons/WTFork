@@ -22,7 +22,10 @@
     </div>
 
     <form action="#">
-      <input type="file" id="filename" placeholder="Filename" size="100"/>
+        <div class="btn btn-mdb-color btn-rounded float-left">
+          <input type="file" id="filename" placeholder="Filename" size="100">
+        </div>
+      <!-- <input type="file" id="filename" placeholder="Filename" size="100"/> -->
       <button onclick="loadFood($('#filename').val(), 'file'); return false;">What's on my Fork?</button>
     </form>
 
