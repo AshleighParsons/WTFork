@@ -6,7 +6,7 @@ body {
     position: absolute; 
 }
 
-.wrapper {
+.wtf-wrapper {
     /* background-color: #f9dfe0; */
     background-image: url(./background.png);
     background-repeat: repeat;
@@ -26,6 +26,7 @@ h3 {
     font-size: 2em;
     text-transform: capitalize;
     font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 1em 0 0.5em;
 }
 
 img {
@@ -41,7 +42,7 @@ form {
     display: block;
 }
 
-.food-photo {
+.foodPic {
     height: 16em;
     background-image: url(./placeholder.jpg);
     background-repeat: no-repeat;

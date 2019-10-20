@@ -15,13 +15,10 @@
   <script type="text/javascript" src="analyse.js"></script>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wtf-wrapper">
     <h1>What The Fork?</h1>
 
-    <div id="predictions">
-      <div class="food-photo">
-        <!-- <img alt="pic" class="pic" src="placeholder.jpg" /> -->
-      </div>
+    <div class="foodPic">
     </div>
 
     <form action="#">
@@ -29,12 +26,8 @@
       <button onclick="loadFood($('#filename').val(), 'file'); return false;">What's on my Fork?</button>
     </form>
 
-    <div id="predictions">
-      <div class="nutrition">
-        <div id="concepts">
-          <h3>Your Food :</h3>
-        </div>
-      </div>
+    <div id="foodInfo">
+      <h3>Your Food :</h3>
     </div>
   </div>
 
