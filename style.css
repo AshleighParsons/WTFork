@@ -1,9 +1,15 @@
-html { overflow-y: scroll; }
+html { 
+    overflow-y: scroll; 
+}
 
-body { position: absolute; }
+body { 
+    position: absolute; 
+}
 
 .wrapper {
-    background-color: #f9dfe0;
+    /* background-color: #f9dfe0; */
+    background-image: url(./background.png);
+    background-repeat: repeat;
     color: #3d8b7d;
     min-height: 100vh;
     padding: 1.5em;
@@ -16,6 +22,12 @@ h1 {
     padding: 0.4em 0;
 }
 
+h3 {
+    font-size: 2em;
+    text-transform: capitalize;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
 img {
     height: 30em;
 }
@@ -26,14 +38,20 @@ img {
 
 form {
     padding: 1.5em 0;
-    padding-left: 2.5em;
     display: block;
 }
 
 .food-photo {
     height: 16em;
-    width: 100vw;
     background-image: url(./placeholder.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+}
+
+button {
+    padding: 0.7em 1em;
+    margin-top: 1em;
+    background-color: #8fbc91;
+    border: #8fbc91;
 }
