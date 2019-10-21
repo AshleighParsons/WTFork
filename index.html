@@ -3,7 +3,6 @@
 <head>
   <title>What The Fork?</title>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
   <script type="text/javascript" src="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/wolfram.js"></script>
 
@@ -18,15 +17,14 @@
   <div class="wtf-wrapper">
     <h1>What The Fork?</h1>
 
-    <div class="foodPic">
+    <div id="foodPic">
     </div>
 
     <form action="#">
         <div class="btn btn-mdb-color btn-rounded float-left">
           <input type="file" id="filename" placeholder="Filename" size="100">
         </div>
-      <!-- <input type="file" id="filename" placeholder="Filename" size="100"/> -->
-      <button onclick="loadFood($('#filename').val(), 'file'); return false;">What's on my Fork?</button>
+      <button onclick="loadFood(document.getElementById('filename').val, 'file'); return false;">What's on my Fork?</button>
     </form>
 
     <div id="foodInfo">
