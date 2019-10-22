@@ -67,11 +67,16 @@ const WtfWrapper = styled.div`
       height: 8em;
     }
   }
+  #nutriPic {
+    margin: 0 auto;
+    max-height: 30em;
+    width: 18em;
+  }
 `
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null)
-  // const [nutriImage, setNutriImage] = useState(null)
+  const [nutriImage, setNutriImage] = useState(null)
 
   var myClarifaiApiKey = '62569dcb57b347df8031ed6a0a50bdee';
   var myWolframAppId = 'RWU4HE-Q9UPPVXHQU';
@@ -79,7 +84,6 @@ function App() {
   var app = new Clarifai.App({apiKey: myClarifaiApiKey});
 
   const fileSelected = e => {
-    console.log(URL.createObjectURL(e.target.files[0]))
     setSelectedFile(URL.createObjectURL(e.target.files[0]))
   }
 
@@ -109,17 +113,21 @@ function App() {
   const analyseFood = (value, result) => {
     app.models.predict(Clarifai.FOOD_MODEL, value).then(function(response) {
         if(response.rawData.outputs[0].data.hasOwnProperty("concepts")) {
+          var infoShow = document.getElementById('nutriPic');
           var tag = response.rawData.outputs[0].data.concepts[0].name;
           // link to Wolfram
           var url = 'http://api.wolframalpha.com/v2/query?input='+tag+'%20nutrition%20facts&appid='+myWolframAppId;
-
           // document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3>';
 
           // post nutritional info
           const getNutritionalInfo = (url, result => {
-            document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3> <img src=' + result + '>';
+            setNutriImage(url)
+            document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3> <img src="' + result + '">';
           });
+
           getNutritionalInfo()
+          console.log(nutriImage)
+          infoShow.style.backgroundImage = "url(" + url + ")"
         }
       }, function(err) { console.log(err); }
     );
@@ -129,12 +137,11 @@ function App() {
     <WtfWrapper>
       <h1>What The Fork?</h1>
 
-      <div id="foodPic">
-      </div>
+      <div id="foodPic" />
 
       <form action="#">
           <div className="btn btn-mdb-color btn-rounded float-left">
-            <input type="file" id="filename" placeholder="Filename" size="100" onChange={fileSelected}/>
+            <input type="file" id="filename" placeholder="Filename" size="100" onChange={fileSelected} />
           </div>
         <button onClick={() => loadFood(document.getElementById('filename').value, 'file')}>What's on my Fork?</button>
       </form>
@@ -142,6 +149,8 @@ function App() {
       <div id="foodInfo">
         <h3>Your Food :</h3>
       </div>
+
+      <div id="nutriPic" />
     </WtfWrapper>
   )
 }
