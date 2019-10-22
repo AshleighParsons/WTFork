@@ -1,8 +1,9 @@
-import React from 'react';
-import './App.css';
-import styled from "styled-components"
+import React, { useState } from 'react'
+import './App.css'
 
+import styled from "styled-components"
 import Clarifai from "clarifai"
+// import axios from "axios"
 
 import Background from "./background.png"
 import Placeholder from "./placeholder.jpg"
@@ -69,10 +70,18 @@ const WtfWrapper = styled.div`
 `
 
 function App() {
+  const [selectedFile, setSelectedFile] = useState(null)
+  // const [nutriImage, setNutriImage] = useState(null)
+
   var myClarifaiApiKey = '62569dcb57b347df8031ed6a0a50bdee';
   var myWolframAppId = 'RWU4HE-Q9UPPVXHQU';
 
   var app = new Clarifai.App({apiKey: myClarifaiApiKey});
+
+  const fileSelected = e => {
+    console.log(URL.createObjectURL(e.target.files[0]))
+    setSelectedFile(URL.createObjectURL(e.target.files[0]))
+  }
 
   const loadFood = (value, source) => {
     var preview = document.getElementById('foodPic');
@@ -82,7 +91,7 @@ function App() {
 
     // load image
     reader.addEventListener("load", (e) => { 
-      preview.style.backgroundImage = 'url(' + reader.result + '})'
+      preview.style.backgroundImage = "url(" + selectedFile + ")"
       analyseFood({ 
         base64: reader.result.split("base64,")[1] 
       });
@@ -125,7 +134,7 @@ function App() {
 
       <form action="#">
           <div className="btn btn-mdb-color btn-rounded float-left">
-            <input type="file" id="filename" placeholder="Filename" size="100" />
+            <input type="file" id="filename" placeholder="Filename" size="100" onChange={fileSelected}/>
           </div>
         <button onClick={() => loadFood(document.getElementById('filename').value, 'file')}>What's on my Fork?</button>
       </form>
@@ -133,8 +142,6 @@ function App() {
       <div id="foodInfo">
         <h3>Your Food :</h3>
       </div>
-
-      <script src="js/ratchet.min.js"></script>
     </WtfWrapper>
   )
 }
