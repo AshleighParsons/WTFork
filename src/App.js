@@ -82,7 +82,7 @@ function App() {
 
     // load image
     reader.addEventListener("load", (e) => { 
-      preview.style.backgroundImage = 'url(' + reader.result + ')'
+      preview.style.backgroundImage = 'url(' + reader.result + '})'
       analyseFood({ 
         base64: reader.result.split("base64,")[1] 
       });
@@ -102,14 +102,15 @@ function App() {
         if(response.rawData.outputs[0].data.hasOwnProperty("concepts")) {
           var tag = response.rawData.outputs[0].data.concepts[0].name;
           // link to Wolfram
-          // var url = 'http://api.wolframalpha.com/v2/query?input='+tag+'%20nutrition%20facts&appid='+myWolframAppId;
+          var url = 'http://api.wolframalpha.com/v2/query?input='+tag+'%20nutrition%20facts&appid='+myWolframAppId;
 
-          document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3>';
+          // document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3>';
 
           // post nutritional info
-          // const getNutritionalInfo = (url, result => {
-          //   document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3>' + "<img src='"+result+"'>";
-          // });
+          const getNutritionalInfo = (url, result => {
+            document.getElementById('foodInfo').innerHTML = '<h3>'+ tag + '</h3> <img src=' + result + '>';
+          });
+          getNutritionalInfo()
         }
       }, function(err) { console.log(err); }
     );
