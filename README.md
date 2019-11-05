@@ -4,7 +4,7 @@ What the fork is an AI powered web application.
 It is used to give users a better idea of the nutritional value of their food!
 
 
-# Features!
+### Features!
 
   - The interface consists of a Homepage, Food Analysis Page, and Information Page
   - Users can either take a picture with their camera, or load a picture from their gallery
