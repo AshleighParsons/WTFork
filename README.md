@@ -13,7 +13,7 @@ It is used to give users a better idea of the nutritional value of their food!
   - Wolfram then analyses the food, and returns the nutritional information
   - If users do not understand something on the analysis, they can navigate to the information page to get a definition
 
-![alt home](screenshots/home-web.png)
+![alt home](images/home-web.png)
 
 
 ### Built with
