@@ -1,4 +1,4 @@
-# What the Fork?
+# [What the Fork?]
 
 What the fork is an AI powered web application.
 It is used to give users a better idea of the nutritional value of their food!
