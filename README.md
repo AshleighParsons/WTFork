@@ -13,8 +13,6 @@ It is used to give users a better idea of the nutritional value of their food!
   - Wolfram then analyses the food, and returns the nutritional information
   - If users do not understand something on the analysis, they can navigate to the information page to get a definition
 
-![alt home](images/home-web.png)
-
 
 ### Built with
 
@@ -41,11 +39,27 @@ $ yarn start
 $ yarn build
 ```
 
-Opeen the site in the server address in your browser.
+Open the site in the server address in your browser.
 
 ```sh
 127.0.0.1:8000
 ```
+
+
+### Site Preview
+
+#### Web
+
+![alt home](images/home-web.png)
+![alt predict](images/predict-web.png)
+![alt info](images/info-web.png)
+
+
+#### Mobile
+
+![alt home](images/home-mob.png)
+![alt predict](images/predict-mob.png)
+![alt info](images/info-mob.png)
 
 License
 ----
