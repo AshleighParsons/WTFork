@@ -13,6 +13,8 @@ It is used to give users a better idea of the nutritional value of their food!
   - Wolfram then analyses the food, and returns the nutritional information
   - If users do not understand something on the analysis, they can navigate to the information page to get a definition
 
+![alt home](images/Screenshot 2019-11-05 at 16.37.32_macbookgrey_front)
+
 
 You can also:
   - Import and save files from GitHub, Dropbox, Google Drive and One Drive
