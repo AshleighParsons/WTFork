@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What the Fork?
 
-## Available Scripts
+What the fork is an AI powered web application.
+It is used to give users a better idea of the nutritional value of their food!
 
-In the project directory, you can run:
 
-### `yarn start`
+# Features!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - The interface consists of a Homepage, Food Analysis Page, and Information Page
+  - Users can either take a picture with their camera, or load a picture from their gallery
+  - The picture is then analysed with Clarifai's Food Model
+  - Once Clarifai tells us what we're eating, we send the name to Wolfram
+  - Wolfram then analyses the food, and returns the nutritional information
+  - If users do not understand something on the analysis, they can navigate to the information page to get a definition
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+You can also:
+  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
+  - Drag and drop markdown and HTML files into Dillinger
+  - Export documents as Markdown, HTML and PDF
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### Built with
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What the Fork uses the following dependencies:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* [ReactJS] - A JS library for building interfaces!
+* [Clarifai] - A computer vision AI API!
+* [Wolfram] - A food nutrition API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install the dependencies and start the server.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+$ cd WTFork
+$ yarn
+$ yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Building What the Fork for source
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+$ yarn build
+```
 
-## Learn More
+Opeen the site in the server address in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+127.0.0.1:8000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+License
+----
 
-### Code Splitting
+MIT
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+   [What the Fork?]: <https://www.wtfork-170074.com>
+   [Reactjs]: <http://reactjs.org>
+   [Clarifai]: <https://www.clarifai.com>
+   [Wolfram]: <https://www.wolframalpha.com/examples/society-and-culture/food-and-nutrition/>
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

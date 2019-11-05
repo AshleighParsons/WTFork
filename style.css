@@ -1,0 +1,72 @@
+html { 
+    overflow-y: scroll; 
+}
+
+body { 
+    position: absolute; 
+}
+
+.wtf-wrapper {
+    /* background-color: #f9dfe0; */
+    background-image: url(./background.png);
+    background-repeat: repeat;
+    color: #3d8b7d;
+    min-height: 100vh;
+    padding: 1.5em;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2.8em;
+    padding: 0.4em 0;
+}
+
+h3 {
+    font-size: 2em;
+    text-transform: capitalize;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 1em 0 0.5em;
+}
+
+img {
+    height: 29em;
+}
+
+.loading {
+    height: 10em;
+}
+
+form {
+    padding: 1.5em 0;
+    width: 8em;
+    display: inline-table;
+}
+
+#foodPic {
+    height: 14em;
+    background-image: url(./placeholder.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+button {
+    padding: 0.7em 1em;
+    margin-top: 1em;
+    background-color: #8fbc91;
+    border: #8fbc91;
+    width: 14.3em;
+    border-radius: 3px;
+}
+
+input {
+    width: 12em;
+}
+
+.btn {
+    background-color: #8fbc91;
+    border: #8fbc91;
+    color: #3d8b7d;
+    padding: 0.85em 1em;
+}
