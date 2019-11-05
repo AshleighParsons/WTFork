@@ -13,11 +13,7 @@ It is used to give users a better idea of the nutritional value of their food!
   - Wolfram then analyses the food, and returns the nutritional information
   - If users do not understand something on the analysis, they can navigate to the information page to get a definition
 
-
-You can also:
-  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
-  - Drag and drop markdown and HTML files into Dillinger
-  - Export documents as Markdown, HTML and PDF
+![alt home](screenshots/home-web.png)
 
 
 ### Built with
